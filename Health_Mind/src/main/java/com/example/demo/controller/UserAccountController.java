@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.example.demo.model.ConfirmationToken;
-//import com.example.demo.model.PostHelper;
+import com.example.demo.model.PostHelper;
 import com.example.demo.model.User;
 import com.example.demo.model.UserHelper;
 import com.example.demo.service.EmailSenderService;
@@ -66,7 +66,7 @@ public class UserAccountController {
 			SimpleMailMessage mailMessage = new SimpleMailMessage();
 			mailMessage.setTo(user.getEmailId());
 			mailMessage.setSubject("Complete Registration!");
-			mailMessage.setFrom("nonlovesme@gmail.com");
+			mailMessage.setFrom("sahasamapty@gmail.com");
 			mailMessage.setText("To confirm your account, please click here : "
 			+"http://localhost:8081/confirm-account?token="+confirmationToken.getConfirmationToken());
 			
