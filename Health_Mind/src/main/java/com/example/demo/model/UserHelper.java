@@ -8,7 +8,7 @@ public class UserHelper {
 	private String name,password,email;
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date dueDate;
-	public String getName() {
+	public String getName() { 
 		return name;
 	}
 	public void setName(String name) {

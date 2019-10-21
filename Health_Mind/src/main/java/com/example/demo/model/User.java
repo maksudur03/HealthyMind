@@ -32,11 +32,11 @@ public class User {
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date dueDate;
 	private boolean isEnabled;
-	/*@OneToMany(mappedBy = "user")
+	@OneToMany(mappedBy = "user")
     @JsonBackReference
-    private List<Post> posts;*/
+    private List<Post> posts;
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
-   // private List<Comment> comments;
+    private List<Comment> comments;
 	public int getUserid() {
 		return userid;
 	}
@@ -78,7 +78,7 @@ public class User {
 	public void setEnabled(boolean isEnabled) {
 		this.isEnabled = isEnabled;
 	}
-	/*public List<Post> getPosts() {
+	public List<Post> getPosts() {
 		return posts;
 	}
 	public void setPosts(List<Post> posts) {
@@ -89,7 +89,7 @@ public class User {
 	}
 	public void setComments(List<Comment> comments) {
 		this.comments = comments;
-	}*/
+	}
 	
 	
 	
