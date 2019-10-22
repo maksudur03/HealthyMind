@@ -44,9 +44,9 @@ public class PostController {
 	@PostMapping(value = "/blog/create",consumes = MediaType.APPLICATION_JSON_VALUE)
 	public String createPost(@RequestBody PostHelper post,@RequestParam(value = "userID") int userID ) {
 		Post postToSubmit = new Post();
-		postToSubmit.setTitle(post.getTitle());
+		//postToSubmit.setTitle(post.getTitle());
 		postToSubmit.setBody(post.getBody());
-		postToSubmit.setAgeLimit(post.getAgeLimit());
+		//postToSubmit.setAgeLimit(post.getAgeLimit());
 		postToSubmit.setcontentHtml(post.getContentHTML());
 		User user = userRepository.findByUserid(userID);
 		postToSubmit.setUser(user);

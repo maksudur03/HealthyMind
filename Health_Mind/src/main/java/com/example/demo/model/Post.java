@@ -36,10 +36,10 @@ public class Post {
     @Column(name = "post_id")
     private Long id;
 
-    @NotBlank(message = "Title can't be empty.")
+   /* @NotBlank(message = "Title can't be empty.")
     @Size(min = 3, message = "A title must be at least 3 characters.")
     @Column(nullable = false)
-    private String title;
+    private String title;*/
 
     @NotBlank(message = "Body can't be empty")
     @Column(nullable = false, length = 3000)
@@ -54,8 +54,8 @@ public class Post {
     @Column(nullable = true, name="contentHtml")
     private String contentHtml;
     
-    @Column(nullable = false,name = "ageLimit")
-    private String ageLimit;
+   /* @Column(nullable = false,name = "ageLimit")
+    private String ageLimit;*/
 
     @ManyToOne
     @JoinColumn(name = "user_id", referencedColumnName = "user_id", nullable = false)
@@ -73,15 +73,15 @@ public class Post {
     @OneToMany(mappedBy = "post", cascade = CascadeType.REMOVE)
     private Collection<Comment> comments;
 
-    public Post(Long id, String title, String body, List<Comment> comments) {
+    public Post(Long id, /*String title*/ String body, List<Comment> comments) {
         this.id = id;
-        this.title = title;
+        //this.title = title;
         this.body = body;
         this.comments = comments;
     }
 
-    public Post(String title, String body, User user, String imgUrl, Collection<Comment> comments) {
-        this.title = title;
+    public Post(/*String title*/ String body, User user, String imgUrl, Collection<Comment> comments) {
+      //  this.title = title;
         this.body = body;
         //this.tags = tags;
         this.user = user;
@@ -100,13 +100,13 @@ public class Post {
         this.id = id;
     }
 
-    public String getTitle() {
+   /* public String getTitle() {
         return title;
     }
 
     public void setTitle(String title) {
         this.title = title;
-    }
+    }*/
 
     public String getBody() {
         return body;
@@ -116,10 +116,10 @@ public class Post {
         this.body = body;
     }
 
-    @Override
+   /* @Override
     public String toString(){
         return "Title: "+ this.getTitle() + " Body: "+ this.getBody();
-    }
+    }*/
 
     public Date getCreateDate() {
         return createDate;
@@ -161,13 +161,13 @@ public class Post {
         this.comments = comments;
     }
 
-	public String getAgeLimit() {
+	/*public String getAgeLimit() {
 		return ageLimit;
 	}
 
 	public void setAgeLimit(String ageLimit) {
 		this.ageLimit = ageLimit;
-	}
+	}*/
     
 
 }

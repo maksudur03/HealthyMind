@@ -3,16 +3,16 @@ package com.example.demo.model;
 import java.util.List;
 
 public class PostHelper {
-	private String title;
+	//private String title;
 	private String body,contentHTML;
-	private String ageLimit;
+	//private String ageLimit;
 	//private List<Tag> taging;
-	public String getTitle() {
+	/*public String getTitle() {
 		return title;
 	}
 	public void setTitle(String title) {
 		this.title = title;
-	}
+	}*/
 	public String getBody() {
 		return body;
 	}
@@ -25,9 +25,9 @@ public class PostHelper {
 	public void setContentHTML(String contentHTML) {
 		this.contentHTML = contentHTML;
 	}
-	public String getAgeLimit() {
+	/*public String getAgeLimit() {
 		return ageLimit;
-	}
+	}*/
 	
 	/*public List<Tag> getTaging() {
 		return taging;
@@ -35,9 +35,9 @@ public class PostHelper {
 	public void setTaging(List<Tag> arr) {
 		this.taging = arr;
 	}*/
-	public void setAgeLimit(String ageLimit) {
+	/*public void setAgeLimit(String ageLimit) {
 		this.ageLimit = ageLimit;
-	}
+	}*/
 //	public PostHelper(String title, String body, String contentHTML, String ageLimit) {
 //		super();
 //		this.title = title;
