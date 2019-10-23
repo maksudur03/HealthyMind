@@ -29,8 +29,8 @@ public class User {
 	
 	private String emailId;
 	private String password;
-	@DateTimeFormat(pattern = "yyyy-MM-dd")
-	private Date dueDate;
+	//@DateTimeFormat(pattern = "yyyy-MM-dd")
+	//private Date Date;
 	private boolean isEnabled;
 	@OneToMany(mappedBy = "user")
     @JsonBackReference
@@ -61,12 +61,12 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public Date getDueDate() {
-		return dueDate;
+	/*public Date getDueDate() {
+		return Date;
 	}
-	public void setDueDate(Date dueDate) {
-		this.dueDate = dueDate;
-	}
+	public void setDueDate(Date Date) {
+		this.Date = Date;
+	}*/
 	public boolean isEnabled() {
 		return isEnabled;
 	}

@@ -81,7 +81,7 @@ public class UserAccountController {
 	@ResponseBody
 	public String login(@RequestBody UserHelper user) {
 		User details= userRepository.findByNameandPassword(user.getName(), user.getPassword());
-		return details.getEmailId()+" "+details.getName()+" "+details.getUserid()+" "+details.getDueDate();
+		return details.getEmailId()+" "+details.getName()+" "+details.getUserid()/*+" "+details.getDueDate()*/;
 		
 	}
 	
@@ -112,7 +112,7 @@ public class UserAccountController {
 			return "Another user exists";
 		}else {
 			User temp = new User();
-			temp.setDueDate(user.getDueDate());
+			//temp.setDueDate(user.getDueDate());
 			temp.setName(user.getName());
 			temp.setPassword(user.getPassword());
 			temp.setEmailId(user.getEmail());

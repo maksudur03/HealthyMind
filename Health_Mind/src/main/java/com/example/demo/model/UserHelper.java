@@ -6,8 +6,8 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 public class UserHelper {
 	private String name,password,email;
-	@DateTimeFormat(pattern = "yyyy-MM-dd")
-	private Date dueDate;
+	//@DateTimeFormat(pattern = "yyyy-MM-dd")
+	//private Date Date;
 	public String getName() { 
 		return name;
 	}
@@ -26,11 +26,11 @@ public class UserHelper {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public Date getDueDate() {
-		return dueDate;
+	/*public Date getDueDate() {
+		return Date;
 	}
-	public void setDueDate(Date dueDate) {
-		this.dueDate = dueDate;
-	}
+	public void setDueDate(Date Date) {
+		this.Date = Date;
+	}*/
 	
 }
